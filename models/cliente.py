@@ -1,5 +1,5 @@
 from datetime import date
-from utils.helpers import date_to_str, str_to_date
+from utils.helper import date_to_str, str_to_date
 
 class Cliente:
     contador = 101
@@ -38,4 +38,4 @@ class Cliente:
         return date_to_str(self.__data_cadastro)
     
     def __str__(self) -> str:
-        return f'Código: {self.__codigo}\nNome: {self.__nome}\nEmail: {self.__email}\nCPF: {self.__cpf}\nData de nascimento: {self.__data_nascimento}\nData de cadastro: {self.__data_cadastro}'
+        return f'Código: {self.__codigo}\nNome: {self.__nome}\nEmail: {self.__email}\nCPF: {self.__cpf}\nData de nascimento: {date_to_str(self.__data_nascimento)}\nData de cadastro: {date_to_str(self.__data_cadastro)}'
