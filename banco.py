@@ -11,9 +11,39 @@ def main() -> None:
 
 
 def menu() -> None:
-    pass
+    print('====================================')
+    print('=============== ATM ================')
+    print('============ Geek Bank =============')
 
+    print('\nSelecione uma opção no menu:')
+    print('1 - Criar conta')
+    print('2 - Efetuar saque')
+    print('3 - Efetuar depósito')
+    print('4 - Efetuar transferência')
+    print('5 - Listar constas')
+    print('6 - Sair do sistema')
 
+    opcao: int = int(input())
+    match opcao:
+        case 1:
+            criar_conta()
+        case 2:
+            efetuar_saque()
+        case 3:
+            efetuar_deposito()
+        case 4:
+            efetuar_transferencia()
+        case 5:
+            listar_contas()
+        case 6:
+            print('Volte sempre!')
+            sleep(2)
+            exit(0)
+        case _:
+            print('Opção inválida!')
+            sleep(2)
+            menu()
+            
 def criar_conta() -> None:
     pass
 
