@@ -133,8 +133,14 @@ def listar_contas() -> None:
         menu()
 
 
-def buscar_conta_por_numero() -> None:
-    pass
+def buscar_conta_por_numero(numero: int) -> Conta:
+    c: Conta = None
+
+    if len(contas) > 0:
+        for conta in contas:
+            if conta.numero == numero:
+                c = conta
+    return c
 
 
 if __name__ == '__main__':
