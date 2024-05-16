@@ -4,7 +4,7 @@ from time import sleep
 from models.cliente import Cliente
 from models.conta import Conta
 
-contas: List = []
+contas: List[Conta] = []
 
 def main() -> None:
     menu()
@@ -104,7 +104,7 @@ def efetuar_transferencia() -> None:
         if conta_origem:
             numero_conta_destino: int = int(input('Informe o número da conta de destino: '))
             conta_destino: Conta = buscar_conta_por_numero(numero_conta_destino)
-            
+
             if conta_destino:
                 valor: float = float(input('Informe o valor da transferência: '))
 
@@ -120,7 +120,17 @@ def efetuar_transferencia() -> None:
 
 
 def listar_contas() -> None:
-    pass
+    if len(contas) > 0:
+        print('Listagem de contas')
+
+        for conta in contas:
+            print(conta)
+            print('-------------------')
+            sleep(1)
+    else:
+        print('Não existem contas cadastradas.')
+        sleep(2)
+        menu()
 
 
 def buscar_conta_por_numero() -> None:
