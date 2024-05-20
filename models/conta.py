@@ -58,6 +58,10 @@ class Conta:
     def saldo_total(self: object) -> float:
         return self.__saldo_total
 
+    @saldo_total.setter
+    def saldo_total(self: object, valor: float) -> None:
+        self.__saldo_total = valor
+        
     @property
     def _calcula_saldo_total(self: object) -> float:
         return self.__saldo + self.__limite
