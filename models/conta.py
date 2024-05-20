@@ -63,8 +63,12 @@ class Conta:
         return self.__saldo + self.__limite
     
     def depositar(self: object, valor: float) -> None:
-        pass
-    
+        if valor > 0:
+            self.saldo = self.saldo + valor
+            self.saldo_total = self._calcula_saldo_total
+        else:
+            print("Erro ao efetuar depósito. Tente novamente.")
+
     def sacar(self: object, valor: float) -> None:
         pass
 
