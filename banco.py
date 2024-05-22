@@ -21,7 +21,8 @@ def menu() -> None:
     print('3 - Efetuar depósito')
     print('4 - Efetuar transferência')
     print('5 - Listar constas')
-    print('6 - Sair do sistema')
+    print('6 - Extrato')
+    print('7 - Sair do sistema')
 
     opcao: int = int(input())
     match opcao:
