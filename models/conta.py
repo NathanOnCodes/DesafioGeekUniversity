@@ -84,7 +84,7 @@ class Conta:
                 self.limite = self.limite + restante
                 self.saldo = 0
                 self.saldo_total = self._calcula_saldo_total
-                print("Saque efetuado com sucesso.")
+            print("Saque efetuado com sucesso.")
         else:
             print("Saque não realizado. Tente novamente")
 
@@ -107,4 +107,6 @@ class Conta:
             print("Transferência não realizada. Tente novamente.")
 
     def extrato(self: object) -> None:
-        pass
+        print(f'Saldo Total: {float_str_moeda(self.saldo_total)}')
+        print(f'Saldo: {float_str_moeda(self.saldo)}')
+        print(f'Limite: {float_str_moeda(self.limite)}')
