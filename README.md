@@ -11,6 +11,6 @@ Este projeto é um programa baseado em diagrama de classes.
 
 
 ## Demonstração do programa:
-![App Screenshot](https://raw.githubusercontent.com/NathanOnCodes/Schema-Auth-API/main/assets/oauthrotadocsprojeto.png)
+![App Screenshot](https://raw.githubusercontent.com/NathanOnCodes/DesafioGeekUniversity/main/assets/geekprint.png)
 
 
